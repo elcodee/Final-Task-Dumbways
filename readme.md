@@ -63,4 +63,4 @@ Project Link: [https://github.com/elcodee/Final-Task-Dumbways](https://github.co
 [issues-url]: https://github.com/elcodee/todoingApp/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/rmdtya/
-[product-screenshot]: /public/assets/img/heroes.png
+[product-screenshot]: CRUD//public/assets/img/heroes.png
