@@ -25,11 +25,12 @@
    <!-- Sidebar -->
    <div id="mySidebar" class="left-menu">
       <a href="javascript:void(0)" class="close-btn" onclick="closeSide()">×</a>
-      <a href="/final-task"><i class="fas fa-home mx-2"></i>Home</a>
-         <a class="clicked" id="task-1" onclick="closeSide()"><i class="fas fa-thumbtack mx-2"></i>Task 1 <span class="badge bg-primary"><i class="fas fa-spinner"></i></span> </a>
+      <a href="/FINAL"><i class="fas fa-home mx-2"></i>Home</a>
+         <a class="clicked" id="task-1" onclick="closeSide()"><i class="fas fa-thumbtack mx-2"></i>Task 1 <span class="badge bg-success"><i class="fas fa-check"></i></span> </a>
          <a class="clicked" id="task-2" onclick="closeSide()"><i class="fas fa-thumbtack mx-2"></i>Task 2 <span class="badge bg-success"><i class="fas fa-check"></i></span> </a>
          <a class="clicked" id="task-3" onclick="closeSide()"><i class="fas fa-thumbtack mx-2"></i>Task 3 <span class="badge bg-success"><i class="fas fa-check"></i></span> </a>
-         <a class="clicked" id="task-4" onclick="closeSide()"><i class="fas fa-thumbtack mx-2"></i>Task 4 <span class="badge bg-primary"><i class="fas fa-spinner"></i></span> </a>
+         <a class="clicked" id="task-4" onclick="closeSide()"><i class="fas fa-thumbtack mx-2"></i>Task 4 <span class="badge bg-success"><i class="fas fa-check"></i></span> </a>
+         <a href="https://github.com/elcodee/Final-Task-Dumbways/tree/master/CRUD"><i class="fas fa-thumbtack mx-2"></i>CRUD <span class="badge bg-primary"><i class="fas fa-spinner"></i></span> </a>
     </div>
 
     <div id="main">
