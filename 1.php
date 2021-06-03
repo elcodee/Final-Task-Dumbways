@@ -19,13 +19,23 @@
 
 
 const pascal_function = (num) => {
-   let data = [];
+   let arrayNumber = [];
+   
+   for(let a = 1; a <= num; a++) {
+       arrayNumber[a] = new Array();
+       for(let b = 1; b <= a; b++) {
+           if(b == 1 || b == a) {
+               arrayNumber[a][b] = 1;
+           } else {
+               arrayNumber[a][b] = arrayNumber[a-1][b-1] + arrayNumber[a-1][b];
+           }
+       }
+   }
    for (let i = 1; i <= num + 1; i++) {
-      data.push(i)
-      for(let j = 1; j <= num + 1; j++){
-         data.push(j)
-         document.getElementById("display").innerHTML += i + '&nbsp;' + j + '<br />'
-      }
+       for(j = 1; j <= i; j++) {
+           document.getElementById("display").innerHTML += arrayNumber[i][j] + '';
+       }
+       document.getElementById("display").innerHTML += '<br />';
    }
 }
 </script>
