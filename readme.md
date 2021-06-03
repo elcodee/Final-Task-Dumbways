@@ -56,8 +56,6 @@ Preview Link: [https://www.dumbways.elcode.xyz/FINAL/](https://www.dumbways.elco
 
 Rama Aditya - [elcode.xyz](https://elcode.xyz) - elcodeee@mail.com
 
-Project Link: [https://github.com/elcodee/Final-Task-Dumbways](https://github.com/elcodee/Final-Task-Dumbways)
-
 <!-- MARKDOWN LINKS & BADGE -->
 
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
