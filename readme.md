@@ -43,7 +43,7 @@ Task Crud Not Fully Complete, I'll explain which part is unfinished
     <li>Type Add</li>
     <li>Type Update</li>
     <li>Type Delete</li> <br />
-    <i>The rest is clear</b>
+    <i>The rest is clear</i>
 </ol>
 
 Project Link: [https://github.com/elcodee/Final-Task-Dumbways](https://github.com/elcodee/Final-Task-Dumbways)
