@@ -42,7 +42,8 @@ Task Crud Not Fully Complete, I'll explain which part is unfinished
 <ol style="color: red;">
     <li>Type Add</li>
     <li>Type Update</li>
-    <li>Type Delete</li>
+    <li>Type Delete</li> <br />
+    <b><li>The rest is clear</li></b>
 </ol>
 
 Project Link: [https://github.com/elcodee/Final-Task-Dumbways](https://github.com/elcodee/Final-Task-Dumbways)
