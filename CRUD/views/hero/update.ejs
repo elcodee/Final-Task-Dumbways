@@ -1,0 +1,55 @@
+<%- include('../components/headComp') %> 
+
+<body class="font-app">
+   <%- include('../components/sidebar') %> 
+      
+   <div id="main">
+      <%- include('../components/navbar') %> 
+
+      <div class="container py-4">
+         <% if(messages.fail) { %>
+            <div class="alert alert-danger alert-dismissible fade show animate__animated animate__flipInX" role="alert">
+              <strong><i class="fas fa-exclamation-triangle me-2"></i></strong> <%- messages.fail %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         <% } %>
+         
+         <div class="row">
+            <div class="animate__animated animate__flipInX">
+               <p class="float-start display-3">Edit Hero <%= name %> </p>
+            </div>
+         </div>
+
+         <div class="row mb-5">
+            <form class="form-floating" action="/hero/update" method="post">
+               <div class="form-floating mb-3">
+                  <input type="hidden" class="form-control" name="id" id="floatingInput" value="<%= id %>" placeholder="title">
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="name" id="floatingInput" value="<%= name %>" placeholder="title">
+                  <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <select class="form-select" name="type" id="floatingSelect">
+                    <option value="<%= typeID %>" selected><%= type %></option>
+                    <option value="1">Strength</option>
+                    <option value="2">HP</option>
+                    <option value="3">Agility</option>
+                  </select>
+                  <label for="floatingSelect">Type</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="photo" id="floatingInput" value="<%= photo %>" placeholder="title">
+                  <label for="floatingInput">URL Photo</label>
+                </div>
+
+               <a href="/" class="btn btn-info float-start text-white mt-3"><i class="fas fa-arrow-left"></i>&nbsp; Back</a>
+               <button type="submit" class="btn btn-primary float-end mt-3"><i class="fas fa-plus"></i>&nbsp; Add</button>
+             </form>
+         </div>
+      </div>
+
+      <%- include('../components/footer') %> 
+   </div>
+</body>
+</html>

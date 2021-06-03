@@ -1,0 +1,96 @@
+<%- include('components/headComp') %> 
+
+<body class="font-app">
+   <%- include('components/sidebar') %> 
+      
+   <div id="main">
+      <%- include('components/navbar') %> 
+
+      <div class="container py-4">
+         <% if(messages.successCreate) { %>
+            <div class="alert alert-success alert-dismissible fade show animate__animated animate__flipInX" role="alert">
+              <strong><i class="fas fa-check-circle me-2"></i></strong> <%- messages.successCreate %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         <% } %>
+
+         <% if(messages.successUpdate) { %>
+            <div class="alert alert-primary alert-dismissible fade show animate__animated animate__flipInX" role="alert">
+              <strong><i class="fas fa-check-circle me-2"></i></strong> <%- messages.successUpdate %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         <% } %>
+
+         <% if(messages.delete) { %>
+            <div class="alert alert-danger alert-dismissible fade show animate__animated animate__flipInX" role="alert">
+              <strong><i class="fas fa-trash me-2"></i></strong> <%- messages.delete %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+         <% } %>
+
+         <div class="row">
+            <div class="animate__animated animate__flipInX">
+               <p class="float-start display-3">7DW</p>
+               <div class="float-end">
+                  <a href="/hero/add" class="btn btn-primary">Add Hero</a>
+                  <button type="button" class="btn btn-primary me-3">Add Type</button>
+               </div>
+            </div>
+         </div>
+
+         <div class="row mb-5">
+            <% result.map((hero, key) => { %>
+               <div class="col-md-3">
+                  <div class="card" style="width: 18rem;">
+                     <img src="<%= hero.photo %>" class="card-img-top" alt="<%= hero.name %>">
+                     <div class="card-body">
+                       <h5 class="card-title"><%= hero.name %> </h5>
+                       <% if(hero.type == "Strength") { %>
+                        <p class="card-text text-danger"><%= hero.type %></p>
+                       <% } %> 
+                       <% if(hero.type == "HP") { %>
+                        <p class="card-text text-success"><%= hero.type %></p>
+                       <% } %> 
+                       <% if(hero.type == "Agility") { %>
+                        <p class="card-text text-info"><%= hero.type %></p>
+                       <% } %>
+                       <!-- <a href="#" class="btn btn-primary">Detail</a> -->
+                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detail<%= hero.id %>">
+                        Detail
+                      </button>
+                     </div>
+                   </div>
+               </div>
+ 
+               <!-- Modal -->
+               <div class="modal fade" id="detail<%= hero.id %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel"><%= hero.name %></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        Name : <%= hero.name %> <br />
+                        Type : <%= hero.type %> <br />
+                        Photo : <%= hero.photo %> <br />
+                     </div>
+                     <div class="modal-footer">
+                        <form action="/hero/delete/<%= hero.id %>">
+                           <button type="submit" class="btn btn-danger">Delete</button>
+                           <a href="/hero/edit/<%= hero.id %>" class="btn btn-info">Edit</a>
+                        </form>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+                  </div>
+               </div>
+ 
+            <% }) %> 
+         </div>
+      </div>
+
+      <%- include('components/footer') %> 
+   </div>
+</body>
+</html>
